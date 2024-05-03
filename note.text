@@ -1,0 +1,15 @@
+create zookeeper, broker and kafdrop:
+    -open terminal and run 'docker compose up'
+
+to open kafdrop:
+    - visit 'localhost:9000'
+
+to create topic:
+    - open terminal run 'docker exec -it {kafka container id} /bin/bash'
+    - navigate to kafka folder inside the opt folder run 'cd /opt' then
+      'ls' then find folder like this 'kafka_2.13-2.8.1' then navigate
+      to the folder with command 'cd kafka_2.13-2.8.1' please replace
+      [kafka_2.13-2.8.1] to the folder name you found.
+    - bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic topicName -- partitions 1 --replication-factor 1
+      replace the topicName then you can see the newly created topic in the kafdrop
+
