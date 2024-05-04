@@ -13,3 +13,14 @@ to create topic:
     - bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --topic topicName -- partitions 1 --replication-factor 1
       replace the topicName then you can see the newly created topic in the kafdrop
 
+to send produce messages:
+    - navigate to kafka folder inside the opt folder.
+    - run this command 'bin/kafka-console-producer.sh --broker-list localhost:9092 --topic cities'
+      replace the broker host port and topic then you can enter any message to produce.
+
+to consume the message:
+    - run command 'bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic cities'
+      in another terminal and at the same kafka folder.
+
+    to see all the messages from beginning run command:
+        'bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic cities --from-beginning'
