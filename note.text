@@ -24,3 +24,7 @@ to consume the message:
 
     to see all the messages from beginning run command:
         'bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic cities --from-beginning'
+
+
+
+hello hello
